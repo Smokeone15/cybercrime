@@ -18,13 +18,13 @@
             transition: transform 0.3s ease, opacity 0.3s ease;
             z-index: 1000;
             padding: 20px;
-			transform: translateX(-100%);
-			opacity: 0;
+            transform: translateX(-100%);
+            opacity: 0;
         }
 
         #sidebar.active {
-		    transform: translateX(0);
-			opacity: 1;
+            transform: translateX(0);
+            opacity: 1;
             left: 0;
         }
 
@@ -40,6 +40,19 @@
         #sidebar ul li a {
             color: #000;
             text-decoration: none;
+        }
+
+        /* Стили для закладки */
+        #sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px; /* Расположение закладки */
+            width: 10px; /* Ширина закладки */
+            height: 100%; /* Высота закладки */
+            background-color: #004080; /* Цвет закладки */
+            border-top-left-radius: 5px; /* Закругление верхнего левого угла */
+            border-bottom-left-radius: 5px; /* Закругление нижнего левого угла */
         }
 
         #toggle-button {
@@ -63,9 +76,8 @@
             <li><a href="#about">О киберпреступности</a></li>
             <li><a href="#types">Виды</a></li>
             <li><a href="#protection">Защита</a></li>
+            <li><a href="types.html">О каждом виде</a></li> <!-- Новая ссылка -->
         </ul>
-		 <li><a href="types.html">О каждом виде</a></li> <!-- Новая ссылка -->
-    </ul>
         <h3>Связь со мной</h3>
         <p>ФИО: Ходаковский Матвей Алексеевич</p>
         <p>Email: <a href="mailto:mattewhodak@gmail.com">mattewhodak@gmail.com</a></p>
