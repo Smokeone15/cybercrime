@@ -7,7 +7,7 @@ body {
 }
 
 h1, h2 {
-    color: #0056b3; /* Синий заголовок */
+    color: #ffffff; /* Белый цвет заголовков */
 }
 
 .container {
@@ -16,12 +16,17 @@ h1, h2 {
 }
 
 a {
-    color: #0056b3; /* Синие ссылки */
+    color: #0056b3; /* Синие ссылки по умолчанию */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+/* Установка белого цвета для ссылок в заголовке */
+header a {
+    color: #ffffff; /* Белые ссылки в заголовке */
 }
 
 header {
@@ -120,8 +125,4 @@ ul {
 
 ul li {
     margin-bottom: 10px;
-}
-
-h1, h2 {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
