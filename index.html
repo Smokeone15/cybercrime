@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Киберпреступность</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для бокового меню */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 1000;
+            padding: 20px;
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        #sidebar.active {
+            transform: translateX(0);
+            opacity: 1;
+            left: 0;
+        }
+
+        #sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            margin: 15px 0;
+        }
+
+        #sidebar ul li a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* Стили для закладки */
+        #sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px; /* Расположение закладки */
+            width: 10px; /* Ширина закладки */
+            height: 100%; /* Высота закладки */
+            background-color: #004080; /* Цвет закладки */
+            border-top-left-radius: 5px; /* Закругление верхнего левого угла */
+            border-bottom-left-radius: 5px; /* Закругление нижнего левого угла */
+        }
+
+        #toggle-button {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            background-color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body>
+    <button id="toggle-button">&#9776;</button> <!-- Кнопка раскладки -->
+    <div id="sidebar">
+        <h2>Меню</h2>
+        <ul>
+            <li><a href="#about">О киберпреступности</a></li>
+            <li><a href="types.html">О каждом виде</a></li> <!-- Новая ссылка -->
+        </ul>
+        <h3>Связь со мной</h3>
+        <p>ФИО: Ходаковский Матвей Алексеевич</p>
+        <p>Email: <a href="mailto:mattewhodak@gmail.com">mattewhodak@gmail.com</a></p>
+        <p>Телефон: <a href="tel:+79143297107">+79143297107</a></p>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>Киберпреступность и её виды</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">О киберпреступности</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Что такое киберпреступность?</h2>
+            <p>Киберпреступность включает в себя любые незаконные действия, которые осуществляются с помощью компьютеров, сетей и интернета. Это может быть несанкционированный доступ к чужим данным, нарушение работы сетей, распространение вредоносных программ и многое другое.</p>
+            <div class="images">
+                <img src="image1.webp" alt="Киберсеть" width="400">
+            </div>
+            <p>В современном мире цифровизация затронула почти все сферы жизни, что делает угрозы киберпреступлений чрезвычайно актуальными для бизнеса, государства и обычных граждан. Киберпреступность становится более изощренной с каждым годом, а преступники постоянно находят новые способы обхода защиты и использования технологий в своих интересах.</p>
+        </div>
+    </section>
+
+    <section id="types" class="section">
+        <div class="container">
+            <h2>Основные виды киберпреступлений</h2>
+            <ul>
+                <li><strong>Взлом (хакерство):</strong> процесс получения несанкционированного доступа к компьютерным системам, сетям или данным. Хакеры могут получать доступ к личной информации, корпоративным секретам или даже государственной информации.</li>
+                <div class="images">
+                    <img src="image2.webp" alt="Хакер с ноутбуком" width="400">
+                </div>
+                <li><strong>Вирусы и вредоносное ПО:</strong> программы, созданные для нарушения работы компьютеров, кражи данных или получения контроля над системой. Они могут повредить или удалить важные файлы, замедлить работу компьютера или даже заблокировать систему.</li>
+                <li><strong>Фишинг:</strong> метод социальной инженерии, при котором мошенники выдают себя за законные организации или лица, чтобы обманом получить конфиденциальные данные, такие как логины, пароли, банковские реквизиты.</li>
+                <li><strong>Кража данных:</strong> незаконное получение информации, такой как банковские реквизиты, номера кредитных карт и другие личные данные.</li>
+                <li><strong>Кибершантаж:</strong> преступники используют угрозы распространения конфиденциальной информации или блокировки данных с целью вымогательства денег.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="protection" class="section">
+        <div class="container">
+            <h2>Как защититься от киберпреступлений?</h2>
+            <ul>
+                <li><strong>Использование антивирусов и фаерволов.</strong> Одним из первых шагов в защите от киберугроз является установка надежных антивирусных программ и фаерволов.</li>
+                <div class="images">
+                    <img src="image3.webp" alt="Цифровой код и наручники" width="400">
+                </div>
+                <li><strong>Шифрование данных.</strong> Шифрование — это процесс преобразования данных в форму, которая недоступна для чтения без специального ключа.</li>
+                <li><strong>Регулярные обновления программного обеспечения.</strong> Разработчики программного обеспечения регулярно выпускают обновления для устранения уязвимостей.</li>
+                <li><strong>Использование сложных паролей.</strong> Использование сложных и уникальных паролей для каждой учетной записи.</li>
+                <li><strong>Обучение и повышение осведомленности.</strong> Компании и пользователи должны обучаться базовым принципам безопасности в интернете.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Кибербезопасность. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-button');
+        const sidebar = document.getElementById('sidebar');
+
+        toggleButton.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+        });
+
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function showImages() {
+            var images = document.querySelectorAll('.images img');
+            images.forEach(function(image) {
+                if (isElementInViewport(image)) {
+                    image.classList.add('show');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', showImages);
+        window.addEventListener('scroll', showImages);
+    </script>
+</body>
+</html>

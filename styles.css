@@ -1,0 +1,128 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #e0f7fa); /* Белый фон с синим градиентом */
+    color: #000; /* Чёрный текст */
+}
+
+h1, h2 {
+    color: #ffffff; /* Белый цвет заголовков */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    color: #0056b3; /* Синие ссылки по умолчанию */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Установка белого цвета для ссылок в заголовке */
+header a {
+    color: #ffffff; /* Белые ссылки в заголовке */
+}
+
+header {
+    background-color: #004080; /* Темно-синий фон */
+    padding: 20px 0;
+    border-bottom: 2px solid #0056b3;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+.section {
+    padding: 40px 0;
+    transition: background-color 0.5s ease;
+}
+
+.section:nth-child(odd) {
+    background-color: #f0f8ff; /* Светло-синий фон */
+}
+
+.section:nth-child(even) {
+    background-color: #e6f7ff; /* Очень светлый синий фон */
+}
+
+section h2 {
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+}
+
+footer {
+    background-color: #004080; /* Темно-синий фон */
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+}
+
+footer p {
+    margin: 0;
+}
+
+.images {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.images img {
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* Стили для анимации */
+.images img {
+    width: 100%;
+    max-width: 600px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.images img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Стили для текста */
+h2 {
+    color: #0056b3;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+p, ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Стили для списков */
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
