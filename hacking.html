@@ -6,7 +6,7 @@
     <title>Взлом (хакерство)</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Стили для бокового меню */
+       /* Стили для бокового меню */
         #sidebar {
             position: fixed;
             top: 0;
@@ -40,6 +40,19 @@
         #sidebar ul li a {
             color: #000;
             text-decoration: none;
+        }
+
+        /* Стили для закладки */
+        #sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10px; /* Расположение закладки */
+            width: 10px; /* Ширина закладки */
+            height: 100%; /* Высота закладки */
+            background-color: #004080; /* Цвет закладки */
+            border-top-left-radius: 5px; /* Закругление верхнего левого угла */
+            border-bottom-left-radius: 5px; /* Закругление нижнего левого угла */
         }
 
         #toggle-button {
