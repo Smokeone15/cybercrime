@@ -224,3 +224,25 @@ ul li {
 .auth-container button:last-child {
     margin-right: 0; /* Убираем отступ у последней кнопки */
 }
+#toggle-auth-panel {
+    background-color: #004080; /* Темно-синий фон */
+    color: white; /* Белый текст */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Отступ снизу */
+    border-radius: 5px; /* Закругление углов */
+}
+
+.auth-container {
+    transition: max-height 0.3s ease; /* Плавное изменение высоты */
+    overflow: hidden; /* Скрываем переполнение */
+}
+.auth-container {
+    max-height: 0; /* Изначально скрываем панель */
+    overflow: hidden; /* Скрываем переполнение */
+    transition: max-height 0.3s ease; /* Плавное изменение высоты */
+}
+
+
+

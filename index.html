@@ -81,18 +81,19 @@
         <p>Email: <a href="mailto:mattewhodak@gmail.com">mattewhodak@gmail.com</a></p>
         <p>Телефон: <a href="tel:+79143297107">+79143297107</a></p>
     </div>
-	<div class="auth-container">
+    <div class="auth-container">
+    <button id="toggle-auth-panel">Свернуть</button>
     <form id="registration-form">
         <h2>Регистрация</h2>
         <input type="text" placeholder="Ник" required>
         <input type="password" placeholder="Пароль" required>
         <div class="button-container">
             <button type="submit">Регистрация</button>
-            <button type="button" id="show-login">Вход</button> <!-- Поменяй тип на "button" если это переключение -->
+            <button type="button" id="show-login">Вход</button>
         </div>
     </form>
 
-    <form id="login-form" style="display: none;"> <!-- Скрываем форму входа изначально -->
+    <form id="login-form" style="display: none;">
         <h2>Вход</h2>
         <input type="text" placeholder="Ник" required>
         <input type="password" placeholder="Пароль" required>
@@ -102,9 +103,6 @@
         </div>
     </form>
 </div>
-
-</div>
-
     <header>
         <div class="container">
             <h1>Киберпреступность и её виды</h1>
@@ -203,6 +201,19 @@
 
         document.addEventListener('DOMContentLoaded', showImages);
         window.addEventListener('scroll', showImages);
-    </script>
+		const toggleAuthPanel = document.getElementById('toggle-auth-panel');
+const authContainer = document.querySelector('.auth-container');
+let isAuthPanelOpen = false;
+toggleAuthPanel.addEventListener('click', function() {
+    if (isAuthPanelOpen) {
+        authContainer.style.maxHeight = null; // Скрыть панель
+        toggleAuthPanel.textContent = 'Развернуть'; // Меняем текст кнопки
+    } else {
+        authContainer.style.maxHeight = authContainer.scrollHeight + 'px'; // Показать панель
+        toggleAuthPanel.textContent = 'Свернуть'; // Меняем текст кнопки
+    }
+    isAuthPanelOpen = !isAuthPanelOpen; // Меняем состояние
+});
+</script>
 </body>
 </html>
