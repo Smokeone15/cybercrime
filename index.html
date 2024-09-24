@@ -81,6 +81,29 @@
         <p>Email: <a href="mailto:mattewhodak@gmail.com">mattewhodak@gmail.com</a></p>
         <p>Телефон: <a href="tel:+79143297107">+79143297107</a></p>
     </div>
+	<div class="auth-container">
+    <form id="registration-form">
+        <h2>Регистрация</h2>
+        <input type="text" placeholder="Ник" required>
+        <input type="password" placeholder="Пароль" required>
+        <div class="button-container">
+            <button type="submit">Регистрация</button>
+            <button type="button" id="show-login">Вход</button> <!-- Поменяй тип на "button" если это переключение -->
+        </div>
+    </form>
+
+    <form id="login-form" style="display: none;"> <!-- Скрываем форму входа изначально -->
+        <h2>Вход</h2>
+        <input type="text" placeholder="Ник" required>
+        <input type="password" placeholder="Пароль" required>
+        <div class="button-container">
+            <button type="submit">Вход</button>
+            <button type="button" id="show-register">Регистрация</button>
+        </div>
+    </form>
+</div>
+
+</div>
 
     <header>
         <div class="container">
@@ -135,6 +158,15 @@
             </ul>
         </div>
     </section>
+	<!-- Вставь это под каждой секцией -->
+<section class="comments-section">
+    <h3>Комментарии</h3>
+    <div id="comments-list"></div>
+    <form id="comment-form">
+        <textarea name="comment" placeholder="Ваш комментарий" required></textarea>
+        <button type="submit">Отправить</button>
+    </form>
+</section>
 
     <footer>
         <div class="container">
